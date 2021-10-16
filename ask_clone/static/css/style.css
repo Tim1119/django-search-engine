@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+    box-sizing: border-box !important;
+}
+
+body{
+    background-color: black;
+}
+.nav-container{
+    display: flex;
+    height:50px; 
+}
+.nav-container .navlinks{
+    height: inherit;
+    list-style: none;
+    align-items: center;
+    width: 20%;
+    margin-left: 80% ;
+    display: flex;
+    justify-content:space-around;
+    
+}
+.navlinks a{
+    text-decoration: none;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rounded{
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.google-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+}
+.google-svg img{
+    width: 300px;
+    height:300px ;
+}
+
+.search-input{
+    margin-left:20% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 60%;
+}
+.search-input .search{
+    height:40px;
+    width: inherit;
+    border-color: white;
+    border-radius: 20px;
+    outline: none;
+    background-image:url('../images/search.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 17px;
+    padding-left: 30px ;
+    
+}
+.google-search-buttons{
+    width: auto;
+   display: flex;
+   
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.the-btn{
+    padding:10px ;
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+    margin:10px;
+}
+.hyper-links{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.the-hyper-link{
+    color:white;
+}
+.waffle{
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width:765px){
+    body{
+        background-color: black;
+    }
+    .google-search-buttons{
+        width: 100%;
+    }
+    .hyper-links{
+        width: 100%;
+    }
+    .search-input{
+        margin-left: 5%;
+        width: 90%;
+    }
+    .nav-container .navlinks{
+        width: 40%;
+        margin-left: 60% ;
+
+    }
+}

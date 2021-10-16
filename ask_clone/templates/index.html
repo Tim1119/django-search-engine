@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>Ask Anything</title>
+</head>
+<body>
+    <nav class="nav-container">
+        
+        <ul class="navlinks">
+            <li><a href="#">Gmail</a></li>
+            <div><a href="#">Images</a></div>
+            <div><span><img class="waffle" src="{% static 'images/waffle.png' %}" alt=""></span></div>
+            <div class="rounded"><a href="#" >t</a></div>
+        </ul>
+            
+    </nav>
+    <div class="google-svg">
+        <img src="{% static 'images/google-svg.svg' %}" alt="" srcset="">
+    </div>
+    <form action="{% url 'clone:home' %}" method="GET">
+        
+        <div class="search-input">
+            <input class="search" type="text" name="search_input"/>
+        </div>
+        <div class="google-search-buttons">
+            <button class="the-btn" type="submit">Google Search</button>
+            <button class="the-btn" type="submit">I'm Feeling Lucky</button>
+        </div>
+    </form>
+    <div class="hyper-links">
+        <p class="the-hyper-link">Google offered in &nbsp;</p> <a href="">Hausa</a>&nbsp; <a href="">Igbo</a> &nbsp <a href="">Èdè Yorùbá </a> &nbsp<a href="">Nigerian Pidgin</a>
+    </div>
+</body>
+
+<script src="{% static 'js/all.min.js' %}"></script>
+</html>

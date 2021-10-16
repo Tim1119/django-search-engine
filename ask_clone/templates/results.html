@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>{% block title %}
+      {{search}}
+    {% endblock title %}</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-top">
+            <div class="google-svg">
+                <img src="{% static 'images/google-svg.svg' %}" alt="" srcset="">
+            </div>
+            <form action="{% url 'clone:home' %}" method="GET">
+                
+                <div class="search-input">
+                    <input class="search" type="text" value="{{search}}" name="search_input"/>
+                    <button class="the-btn" type="submit" id="search-btn">Search</button>
+                </div>
+            </form>
+            <div class="icons">
+                <span><i class="fa fa-cog fa-2x"></i></span>
+                <span><img class="waffle" src= "{% static 'images/waffle.png' %}" ></span>
+                <span class="rounded">t</span>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="result-container">
+        
+        {% if final_result %}
+        <b style="padding-left: 50px; padding-right: 50px; color: #646464;">Web Results</b>
+        {% for result in final_result %}
+        <div style="padding-left: 50px; padding-right: 50px;">
+            <h3 id="title"><a href="{{ result.1 }}">{{ result.0 }}</a></h3>
+            <p id="url">{{ result.1 }}</p>
+            <p id="description" >{{ result.2 }}</p>
+        </div><br><br>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+<script src="{% static 'js/all.min.js' %}"></script>
+</html>
