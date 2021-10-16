@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: white;
 }
 .nav-container{
     display: flex;
@@ -19,11 +19,12 @@ body{
     margin-left: 80% ;
     display: flex;
     justify-content:space-around;
+    color: black;
     
 }
 .navlinks a{
     text-decoration: none;
-    color:white;
+    color:black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -43,10 +44,13 @@ body{
     height:200px;
 }
 .google-svg img{
-    width: 300px;
-    height:300px ;
+    width: 400px;
+    height:400px ;
 }
+.the-search-margin{
 
+    margin-top: 30px !important;
+}
 .search-input{
     margin-left:20% ;
     display: flex;
@@ -58,7 +62,7 @@ body{
 .search-input .search{
     height:40px;
     width: inherit;
-    border-color: white;
+    border-color: black;
     border-radius: 20px;
     outline: none;
     background-image:url('../images/search.svg');
@@ -100,18 +104,22 @@ body{
 }
 
 @media screen and (max-width:765px){
+    .nav-container .navlinks{
+        color: black;
+    }
     body{
-        background-color: black;
+        background-color: white;
     }
     .google-search-buttons{
         width: 100%;
     }
     .hyper-links{
         width: 100%;
+        
     }
     .search-input{
         margin-left: 5%;
-        width: 90%;
+        width: 400px !important;
     }
     .nav-container .navlinks{
         width: 40%;

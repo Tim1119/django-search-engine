@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Ask Anything</title>
 </head>
 <body>
@@ -15,15 +15,14 @@
         <ul class="navlinks">
             <li><a href="#">Gmail</a></li>
             <div><a href="#">Images</a></div>
-            <div><span><img class="waffle" src="{% static 'images/waffle.png' %}" alt=""></span></div>
             <div class="rounded"><a href="#" >t</a></div>
         </ul>
             
     </nav>
     <div class="google-svg">
-        <img src="{% static 'images/google-svg.svg' %}" alt="" srcset="">
+        <img src="https://oasismagazine.com.ng/wp-content/uploads/2021/10/google2.0.0-1.jpg"/>
     </div>
-    <form action="{% url 'clone:home' %}" method="GET">
+    <form action="{% url 'clone:home' %}" method="GET" class="the-search-margin">
         
         <div class="search-input">
             <input class="search" type="text" name="search_input"/>
@@ -34,7 +33,7 @@
         </div>
     </form>
     <div class="hyper-links">
-        <p class="the-hyper-link">Google offered in &nbsp;</p> <a href="">Hausa</a>&nbsp; <a href="">Igbo</a> &nbsp <a href="">Èdè Yorùbá </a> &nbsp<a href="">Nigerian Pidgin</a>
+        <p class="the-hyper-link" style="color: black;">Google offered in &nbsp;</p> <a href="">Hausa</a>&nbsp; <a href="">Igbo</a> &nbsp <a href="">Èdè Yorùbá </a> &nbsp<a href="">Nigerian Pidgin</a>
     </div>
 </body>
 

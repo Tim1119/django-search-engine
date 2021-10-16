@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <title>{% block title %}
+      {{search}}
+    {% endblock title %}</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-top">
+            <div class="google-svg">
+                <img src="{% static 'images/google-svg.svg' %}" alt="" srcset="">
+            </div>
+            <form action="{% url 'clone:home' %}" method="GET">
+                
+                <div class="search-input">
+                    <input class="search" type="text" value="{{search}}" name="search_input"/>
+                    <button class="the-btn" type="submit" id="search-btn">Search</button>
+                </div>
+            </form>
+            <div class="icons">
+                <span><i class="fa fa-cog fa-2x"></i></span>
+                <span><img class="waffle" src= "data:image/png;base64,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" ></span>
+                <span class="rounded">t</span>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="result-container">
+        
+        {% if final_result %}
+        <b style="padding-left: 50px; padding-right: 50px; color: #646464;">Web Results</b>
+        {% for result in final_result %}
+        <div style="padding-left: 50px; padding-right: 50px;">
+            <h3 id="title"><a href="{{ result.1 }}">{{ result.0 }}</a></h3>
+            <p id="url">{{ result.1 }}</p>
+            <p id="description" >{{ result.2 }}</p>
+        </div><br><br>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+<script src="{% static 'js/all.min.js' %}"></script>
+</html>

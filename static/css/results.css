@@ -5,11 +5,11 @@
 }
 
 body{
-    background-color: black;
+    background-color: white !important;
 }
 nav{
     height: 70px;
-    color: white;
+    color: black;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -101,7 +101,7 @@ nav .nav-top{
     color: #0E7B62;
 }
 #description{
-    color: #FFF7DF;
+    color: black;
 }
 
 @media screen and (max-width:765px){
@@ -114,6 +114,18 @@ nav .nav-top{
     }
     .result-container{
         width: 100%;
+        margin-top: 10px !important;
         margin-left: 0%;
+    }
+    .search-input .search{
+        margin-left: 5%;
+        width: 400px !important;
+    }
+    .search-input {
+       width:300px;
+      
+    }
+    nav .nav-top{
+        flex-basis: 20% 50% 30%;
     }
 }
